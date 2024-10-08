@@ -19,6 +19,6 @@ The script can be revised and supplemented very easily - simply call it up in th
 
 ![](assets/simple-sort3.png)
 
-![Video](simple-sort.mp4)
+## animated GIF
 
-https://github.com/paperlesswriter/simple-sort/blob/main/simple-sort.mp4
+![simple-sort](assets/simple-sort.gif)
