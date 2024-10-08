@@ -15,6 +15,9 @@ get_category() {
         mp3|wav|flac|ogg|aac)
             echo "Audio"
             ;;
+        ppt|pptx|odp)
+            echo "Präsentationen"
+            ;;
         zip|rar|tar|gz|7z)
             echo "Archive"
             ;;
