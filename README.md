@@ -9,12 +9,12 @@ The script can be revised and supplemented very easily - simply call it up in th
 
 ## Example: cluttered download folder
 
-![](R:\test\simple-sort1.png)
+![](assets/simple-sort1.png)
 
 ## Cleaned up directory
 
-![](R:\test\simple-sort2.png)
+![](assets/simple-sort2.png)
 
 ## Markdown document with clear table
 
-![](R:\test\simple-sort3.png)
+![](assets/simple-sort3.png)
