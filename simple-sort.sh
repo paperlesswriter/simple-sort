@@ -27,6 +27,9 @@ get_category() {
     esac
 }
 
+# Array zur Speicherung der Kategorien und Dateien
+declare -A categories
+
 # Hauptscript
 for file in *; do
     if [ -f "$file" ]; then
@@ -35,7 +38,25 @@ for file in *; do
         mkdir -p "$category"
         mv "$file" "$category/"
         echo "Verschoben: $file nach $category/"
+        
+        # Füge die Datei zur entsprechenden Kategorie im Array hinzu
+        categories["$category"]+="$file, "
     fi
 done
 
 echo "Sortierung abgeschlossen."
+
+# Erstelle Markdown-Datei
+echo "# Verschobene Dateien" > verschoben.md
+echo "" >> verschoben.md
+echo "| Kategorie | Dateien |" >> verschoben.md
+echo "|-----------|---------|" >> verschoben.md
+
+for category in "${!categories[@]}"; do
+    files=${categories[$category]}
+    # Entferne das letzte Komma und Leerzeichen
+    files=${files%, }
+    echo "| $category | $files |" >> verschoben.md
+done
+
+echo "Markdown-Datei 'verschoben.md' wurde erstellt."
