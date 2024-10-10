@@ -32,7 +32,7 @@ declare -A categories
 
 # Hauptscript
 for file in *; do
-    if [ -f "$file" ]; then
+    if [ -f "$file" ] && [ "$file" != "simple-sort.sh" ]; then
         ext="${file##*.}"
         category=$(get_category "$ext")
         mkdir -p "$category"
